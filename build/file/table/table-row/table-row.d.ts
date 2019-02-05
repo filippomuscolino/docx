@@ -7,5 +7,6 @@ export declare class TableRow extends XmlComponent {
     getCell(ix: number): TableCell;
     addGridSpan(index: number, cellSpan: number): TableCell;
     mergeCells(startIndex: number, endIndex: number): TableCell;
-    setCantSplit(value: boolean): TableRow;
+    setCantSplit(): TableRow;
+    setTableHeader(): TableRow;
 }
