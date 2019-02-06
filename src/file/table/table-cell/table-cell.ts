@@ -3,7 +3,7 @@ import { Paragraph } from "file/paragraph";
 import { IXmlableObject, XmlComponent } from "file/xml-components";
 
 import { Table } from "../table";
-import { TableCellBorders, VerticalAlign } from "./table-cell-components";
+import { TableCellBorders, VerticalAlign, WidthType } from "./table-cell-components";
 import { TableCellProperties } from "./table-cell-properties";
 
 export class TableCell extends XmlComponent {
@@ -60,5 +60,11 @@ export class TableCell extends XmlComponent {
 
     public get Borders(): TableCellBorders {
         return this.properties.Borders;
+    }
+
+    public setWidth(width: string | number, type: WidthType = WidthType.AUTO): TableCell {
+        this.properties.setWidth(width, type);
+
+        return this;
     }
 }
