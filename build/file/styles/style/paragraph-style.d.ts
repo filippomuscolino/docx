@@ -6,6 +6,7 @@ export declare class ParagraphStyle extends Style {
     private readonly runProperties;
     constructor(styleId: string, name?: string);
     addParagraphProperty(property: XmlComponent): ParagraphStyle;
+    outlineLevel(level: string): ParagraphStyle;
     addRunProperty(property: XmlComponent): ParagraphStyle;
     basedOn(parentId: string): ParagraphStyle;
     quickFormat(): ParagraphStyle;
